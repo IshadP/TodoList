@@ -35,10 +35,6 @@ function Task(){
     taskdiv.appendChild(task);
     taskdiv.appendChild(taskcomp);
     ongoing.appendChild(taskdiv);
-    
-    statusbtn.appendChild(taskdiv);
-    deletebtn.appendChild(taskdiv);
-
 
     document.getElementById("inputtext").value="";
     saveTodoList();
