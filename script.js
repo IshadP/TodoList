@@ -2,8 +2,6 @@ const addTaskbtn = document.getElementById("add--task");
 const ongoing = document.getElementById("ongoing");
 const completed = document.getElementById("completed");
 
-loadTodo();
-
  //Event-Listeners
 addTaskbtn.addEventListener("click", Task);
 ongoing.addEventListener("click", function(event) {
@@ -35,6 +33,10 @@ function Task(){
     taskdiv.appendChild(task);
     taskdiv.appendChild(taskcomp);
     ongoing.appendChild(taskdiv);
+    
+    statusbtn.appendChild(taskdiv);
+    deletebtn.appendChild(taskdiv);
+
 
     document.getElementById("inputtext").value="";
     saveTodoList();
@@ -47,7 +49,7 @@ function saveTodoList(){
     localStorage.setItem('todoList', todoList.join(';'));
 }
 
-function loadTodo() {
+function retriveTodo() {
    const savedTodoList = localStorage.getItem('todoList');
     if (savedTodoList) {
         const todoList = savedTodoList.split(';');
@@ -72,6 +74,7 @@ function loadTodo() {
 }
 
 
+retriveTodo();
 
 
 /* <div class="task">
