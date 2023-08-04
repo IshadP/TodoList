@@ -1,0 +1,165 @@
+
+:root{
+    --accent1: grey;
+    --accent2: red;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Akshar;
+    src: url(./fonts/Akshar.ttf);
+}
+/* Background */
+.background{
+    background-image: linear-gradient(135deg, rgba(0,212,255,1) 0%, rgba(238,237,253,1) 18%, rgba(255,255,255,1) 35%, rgba(246,246,254,1) 50%, rgba(234,233,252,1) 70%, rgba(215,213,250,1) 77%, rgba(17,5,223,1) 100%);
+    /* background-image: url(./img/1195479.jpg); */
+    background-size: 100%  100%;    
+    height: 100vh;
+    width: 100vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.todolist--main{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    padding: 40px;
+    margin-left: 20vh;
+    margin-right: 20vh;
+    backdrop-filter: blur(10px) drop-shadow(20px 30px 2px black);
+    /* box-shadow: 0px 0px 10px 1px black; */
+}
+
+.seperator{
+    border: 2px solid var(--accent1);
+    width: 100%;
+    border-radius: 100px;
+    margin: 2vh;
+}
+
+.ongoing--heading, .completed--heading, .form--text{
+    font-family: Akshar, sans-serif;
+    width: 60vh;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+/* Form */
+
+.task--input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form--text{
+    font-family: Akshar, sans-serif;
+}
+
+.input--field{
+    display: flex;
+    flex-direction: row;
+}
+
+.input--text{
+ height: 3vh;
+ padding: 1vh;
+ width: 76%;
+ font-family: Akshar, sans-serif;
+ font-size: 2vh;
+ background-color: transparent;
+ backdrop-filter: blur(20px);
+ border: 2px solid var(--accent1);
+ border-radius: 20px;
+}
+
+.add--task{
+ padding: 1vh;
+ margin-left: 1vh;
+ border: 2px solid var(--accent1);
+ border-radius: 20px; 
+ background-color: transparent;
+ backdrop-filter: blur(20px);
+ font-family: Akshar, sans-serif;
+}
+
+/*Tasks*/
+
+.task{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* border: 0.5px solid black; */
+    border-radius: 50px;
+    margin: 1vh;
+
+}
+
+.task--status{
+    font-family: Akshar, sans-serif;
+    font-weight: 600;
+    width: 10vh;
+    padding: 1vh;
+    border: 2px solid var(--accent1);
+    border-radius: 10px;
+    background: transparent;
+}
+
+.task--status:active{
+    font-family: Akshar, sans-serif;
+    font-weight: 600;
+    width: 10vh;
+    padding: 1vh;
+    border: 2px solid var(--accent2);
+    color: var(--accent2);
+    border-radius: 10px;
+    background: transparent;
+}
+
+
+.task--desc{
+    display: flex;
+    align-items: flex-start;
+    font-size: 2vh;
+    font-family: Akshar, sans-serif;
+    padding: 1vh;
+    margin-right: 10vw;
+    min-width: 76%;
+}
+
+
+.task--desc--completed{
+    font-family: Akshar, sans-serif;
+    margin-right: 10vw;
+    min-width: 76%;
+    text-decoration: line-through;
+}
+
+.delete--task{
+    font-family: Akshar, sans-serif;
+    font-weight: 600;
+    width: 10vh;
+    padding: 1vh;
+    border: 2px solid var(--accent1);
+    border-radius: 10px;
+    background: transparent;
+}
+
+.delete--task:active{
+    font-family: Akshar, sans-serif;
+    font-weight: 600;
+    width: 10vh;
+    padding: 1vh;
+    border: 2px solid var(--accent2);
+    color: var(--accent2);
+    border-radius: 10px;
+    background: transparent;
+}
