@@ -2,6 +2,8 @@ const addTaskbtn = document.getElementById("add--task");
 const ongoing = document.getElementById("ongoing");
 const completed = document.getElementById("completed");
 
+loadTodo();
+
  //Event-Listeners
 addTaskbtn.addEventListener("click", Task);
 ongoing.addEventListener("click", function(event) {
@@ -49,7 +51,7 @@ function saveTodoList(){
     localStorage.setItem('todoList', todoList.join(';'));
 }
 
-function retriveTodo() {
+function loadTodo() {
    const savedTodoList = localStorage.getItem('todoList');
     if (savedTodoList) {
         const todoList = savedTodoList.split(';');
@@ -74,7 +76,6 @@ function retriveTodo() {
 }
 
 
-retriveTodo();
 
 
 /* <div class="task">
