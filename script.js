@@ -42,7 +42,14 @@ function Task(){
     saveTodoList();
 }
 
-function saveTodoList() {
+
+function saveTodoList(){
+    const tasks = Array.from(document.querySelectorAll('.task--desc'));
+    const todoList = tasks.map(task => task.innerHTML);
+    localStorage.setItem('todoList', todoList.join(';'));
+}
+
+function retriveTodo() {
    const savedTodoList = localStorage.getItem('todoList');
     if (savedTodoList) {
         const todoList = savedTodoList.split(';');
